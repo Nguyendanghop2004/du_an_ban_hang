@@ -1,0 +1,39 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Product extends Model
+{
+    use HasFactory;
+    protected $fillable = [
+        'catelogue_id',
+        'name',
+        'slug',
+        'sku',
+        'img_thumbnail',
+        'price_regular',
+        'price_sale',
+        'description',
+        'conten',
+        'material',
+        'user_manual',
+        'views',
+        'is_active',
+        'is_hot_deal',
+        'is_good_deal',
+        'is_new',
+        'is_show_home',
+
+    ];
+    protected $casts = [
+        'is_active' => 'is_active',
+        'is_hot_deal' => 'is_hot_deal',
+        'is_good_deal' => 'is_good_deal',
+        'is_new' => 'is_new',
+        'is_show_home' => 'is_show_home',
+
+    ];
+}
